@@ -1,0 +1,42 @@
+[
+ {
+  "nombre": "Restaurante",
+  "imgPrincipal": "restaurante.jpg",
+  "descripcion": "Disfruta de nuestra opción de restaurante con una gran variedad de platos para que chicos y grandes puedan degustar",
+  "precio": 250,
+  "categoria": "nuevo",
+  "participantes": 2
+ },
+ {
+  "nombre": "Cabalgata",
+  "imgPrincipal": "cabalgata.jpg",
+  "descripcion": "Vive una experiencia donde podrás conocer pueblos cercanos y la biodiversidad de la naturaleza en todo esplendor",
+  "precio": 500,
+  "categoria": "oferta",
+  "participantes": 2
+ },
+ {
+  "nombre": "prueba",
+  "imgPrincipal": "1665375128379.jpg",
+  "precio": 123,
+  "participantes": 12,
+  "categoria": "oferta",
+  "descripcion": " prueba prueba"
+ },
+ {
+  "nombre": "Escalar",
+  "imgPrincipal": "1665538242209.jpg",
+  "precio": 800,
+  "participantes": 2,
+  "categoria": "nuevo",
+  "descripcion": "  Disfruta de una gran escalada "
+ },
+ {
+  "nombre": "m",
+  "imgPrincipal": "1668724667311.jpg",
+  "precio": "4",
+  "participantes": "4",
+  "categoria": "nuevo",
+  "descripcion": " m"
+ }
+]

@@ -1,0 +1,56 @@
+.container{
+	width: 100%;
+	position: relative;
+}
+.carousel-inner img {
+    width: 100%;
+    max-height: 460px;
+	object-fit:cover;
+	position: absolute;
+	box-sizing: border-box;
+}
+.carousel-inner{
+ height: 350px;
+ display:block;
+ width: 100%;
+}
+.container img{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-color: rgba(97, 129, 97, 0.843);
+}
+.container #parrafo-spa{
+	font-size: 3rem;
+	color:white;
+	position: absolute;
+	top: 15%;
+	left:40%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+	letter-spacing: 4px;
+	cursor: pointer;
+}
+.container #parrafo-gastro{
+	font-size: 3rem;
+	color:white;
+	position: absolute;
+	top: 47%;
+	left:40%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+	letter-spacing: 4px;
+	cursor: pointer;
+}
+.container #parrafo-excu{
+	font-size: 3rem;
+	color:white;
+	position: absolute;
+	top: 82%;
+	left:40%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+	letter-spacing: 4px;
+	cursor: pointer;
+}

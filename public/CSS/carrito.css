@@ -1,0 +1,126 @@
+
+body {
+    
+    background-image: url("https://images.squarespace-cdn.com/content/v1/575e7db422482eb36c507389/1593777176399-JIGKJ29Z0ANIPKUK73Z3/052_Architecture_TCunniffe.jpg");
+    color: white;
+    
+  }
+
+
+.enlaces {
+    display: flex;
+    list-style-type: none;
+    font-size:large
+}
+
+.carrito {
+    display:flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: solid 10px rgba(0, 0, 0, 0.90);
+    opacity: 0.8;
+    width: 80vw;
+    align-items: center;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.confirmar {
+    padding: 15px ;
+    background-color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    border: solid 10px rgba(0, 0, 0, 0.90);
+    
+}
+
+.total {
+    font-weight: bold;
+    text-align: left;
+}
+
+.izq {
+    text-align: left;
+}
+
+.botonx {
+    position: absolute;
+    right: 750px;
+}
+
+.barra-superior {
+	box-sizing: border-box;
+    background-color: rgba(0,0,0,0.75);
+    height: 14vh;
+	font-weight: bold;
+	margin-bottom: 0.5vh;
+	color:#FFF;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.items {
+	width: 20%;
+	margin: 0;
+	font-size: 2vw;
+	font-family: sans-serif;
+}
+
+
+
+.barra-superior p > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+	list-style-type: none;
+}
+	
+.main-footer {
+	background-color: rgba(0,0,0,0.75);
+    margin-top: 10px;
+	text-align: center;
+	display: flex;
+	flex-flow: column wrap;
+
+}
+.footer{
+	margin-top:2vh ;
+	color: #fff;
+}
+
+.footer ul {
+	padding: 0;
+	cursor: pointer;
+}
+
+@media (min-width:800px) {
+
+	.items {
+		font-size: 1.6vw;
+	}
+	.main-footer {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+	.footer {
+		width: 30%;
+	}
+
+
+	.footer i {
+		margin-bottom: 3vh;
+	}
+}
+	
+	
+.maps {
+	font-size: 5.5vw;
+	margin-top: 15px;
+}
+	

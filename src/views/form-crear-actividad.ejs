@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/43ee8fadd4.js" crossorigin="anonymous"></script>
+    <!-- LORDICON -->
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+    <!-- ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="/CSS/crear-actualizar-form.css">
+    <title>Crear actividad</title>
+</head>
+<body>
+
+    <%- include ('./partials/header.ejs') %>
+    <div class="div1">
+        <h1> Formulario de una nueva actividad</h1>
+
+        <form action="create" method="POST" enctype="multipart/form-data">
+
+            <section class="form-section">
+                <article class="form-items">
+                    <label for="nombre">Nombre de la actividad:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre de la nueva actividad" class="form-input">
+                </article>
+                <article class="form-items">
+                    <label for="valor">Valor:</label>
+                    <input type="text" id="valor" name="valor" placeholder="Precio de la nueva actividad" class="form-input">
+                </article>
+                <article class="form-items">
+                    <label for="participantes">Participantes:</label>
+                    <input type="text" id="participantes" name="participantes" placeholder="Participantes de la actividad" class="form-input">
+                </article>
+                <article class="form-items">
+                    <label for="categoria">Categoria:</label>
+                    <select name="categoria" id="categoria" class="form-input">
+                        <option value="">Escoge la categoria</option>
+                        <option value="nuevo">Nuevo</option>
+                        <option value="Temporada">Actividad de temporada</option>
+                    </select>
+                </article>
+                <!-- <article class="form-items">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" id="tipo" name="tipo" placeholder="Participantes de la actividad" class="form-input">
+                </article> -->
+                <article class="form-items">
+                    <label for="descripcion">Descripcion:</label>
+                    <textarea id="descripcion" name="descripcion" class="text-area" > </textarea>
+                </article>
+                
+                <article class="form-items">
+                    <label for="imgPrincipal">Cargar imagen:</label>
+                    <input type="file" id="imgPrincipal" name="imgPrincipal" multiple class="form-input">
+                </article>
+            </section> 
+
+            <button type="submit" class="form-button">Crear actividad</button>
+
+            </form>
+    
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>

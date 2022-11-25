@@ -1,0 +1,34 @@
+[
+    {
+     "id": 1,
+     "name": "Matias Romero",
+     "email": "matiasromero@gmail.com",
+     "password": "$2a$10$hVnXiF6FyGJj2Yd.jdwZpO0Gi8d/ZkpWxClTj5w2uMXcTuqPKdqDW",
+     "username": "Mati",
+     "image": "1666924143332.jpg"
+    },
+    {
+     "id": 2,
+     "name": "Santiago Rodriguez",
+     "email": "santiagorodriguez@gmail.com",
+     "password": "$2a$10$XVnUH6DXZflp.qo5gW6aT.LFKhL9FWjn3U7vkJy3tfixWgClVprd2",
+     "username": "Santi",
+     "image": "1666924374971.jpg"
+    },
+    {
+     "id": 3,
+     "name": "Camilo Pitta",
+     "email": "camilopitta@gmail.com",
+     "password": "$2a$10$hLq3tAj8mnPSqlMGtieN9.YOpQ0rONcvP043RUULVgc8NiN64ce2W",
+     "username": "Cami",
+     "image": "1666924423045.jpg"
+    },
+    {
+     "id": 4,
+     "name": "Julian Jerez",
+     "email": "julianjerez@gmail.com",
+     "password": "$2a$10$yCGuArC7d7QJsiRAJCf41.oVU/dxyfcZ7YkfTF6XSlbPSjEyHqgA2",
+     "username": "Juli",
+     "image": "1666924453357.jpg"
+    }
+   ]

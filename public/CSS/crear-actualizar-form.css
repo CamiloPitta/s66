@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/575e7db422482eb36c507389/1593777176399-JIGKJ29Z0ANIPKUK73Z3/052_Architecture_TCunniffe.jpg");
+    font-family: sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4vw;
+    color: #ffffff;
+}
+
+/*
+INICIO ESTILOS DEL HEADER
+*/
+.barra-superior {
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.75);
+    height: 14vh;
+    font-weight: bold;
+    margin-bottom: 0.5vh;
+    color:#FFF;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.items {
+    width: 20%;
+    margin: 0;
+    font-size: 1.6vw;
+}
+
+
+.barra-superior p > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+/*
+FIN ESTILOS DEL HEADER
+*/
+
+/*
+INICIO ESTILOS DEL FOOTER
+*/
+
+ul {
+    list-style-type: none;
+}
+.main-footer {
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    
+}
+.footer{
+    width: 30%;
+    margin-top:2vh ;
+    color: #fff;
+}
+    
+.footer ul {
+    padding: 0;
+    cursor: pointer;
+}
+
+.footer i {
+    margin-bottom: 3vh;
+}
+
+.maps {
+    font-size: 5.5vw;
+    margin-top: 15px;
+}
+
+/*
+FIN ESTILOS DEL FOOTER
+*/
+
+/*
+INICIO ESTILOS DEL FORM
+*/
+
+.div1 {
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;    
+    background-color: #ebebeb;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+}
+
+.form-items {
+    font-size: 1.5vw;
+    width: 50%;
+}
+
+.form-items > * {
+    display: block;
+    padding-top: 10px;
+    margin: 5px 0 10px 10px;
+}
+
+.form-input {
+    border: none;
+    border-radius: 3px;
+    height: 6vh;
+    width: 95%;
+}
+
+.form-section article:nth-child(5){
+    width: 90%;
+}
+
+.text-area {
+    border: none;
+    border-radius: 3px;
+    height: 16vh;
+    width: 108%;
+}
+ 
+.form-button {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	font-size:1.3vw;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.form-button:hover {
+	background-color:#5cbf2a;
+}
+
+.form-button-delete {
+	background-color:#DC0000;
+	border-radius:28px;
+	border:1px solid #C40E00;
+	display:inline-block;
+	cursor:pointer;
+	font-size:1.3vw;
+	padding:16px 31px;
+	text-decoration:none;
+}
+
+.form-button-delete:hover {
+	background-color:#FF0000;
+}
+
+
+/*
+FIN ESTILOS DEL FORM
+*/
+        
+@media (max-width: 800px) {
+
+    .items,
+    .form-button, 
+    .form-button-delete {
+        font-size: 2.5vw;
+    }
+    
+    .main-footer {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+
+    .footer i {
+        margin-bottom: 3vh;
+    }
+
+    .form-input {
+        height: 5vh;
+        width: 80%;
+    }
+
+    .form-items {
+        font-size: 3vw;
+    }
+        
+    }
+        
+
+        

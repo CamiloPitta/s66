@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: https://ondras.zarovi.cz/sql/demo/?keyword=default -->
+<sql>
+<datatypes db="mysql">
+<group label="Numeric" color="rgb(238,238,170)">
+<type label="Integer" length="0" sql="INTEGER" quote=""/>
+<type label="TINYINT" length="0" sql="TINYINT" quote=""/>
+<type label="SMALLINT" length="0" sql="SMALLINT" quote=""/>
+<type label="MEDIUMINT" length="0" sql="MEDIUMINT" quote=""/>
+<type label="INT" length="0" sql="INT" quote=""/>
+<type label="BIGINT" length="0" sql="BIGINT" quote=""/>
+<type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
+<type label="Single precision" length="0" sql="FLOAT" quote=""/>
+<type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
+</group>
+<group label="Character" color="rgb(255,200,200)">
+<type label="Char" length="1" sql="CHAR" quote="'"/>
+<type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+<type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
+<type label="Binary" length="1" sql="BINARY" quote="'"/>
+<type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
+<type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
+</group></datatypes><table x="101" y="355" name="Hostería">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Nombre" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>'NULL'</default></row>
+<row name="Dirección" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>'NULL'</default></row>
+<row name="Email" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Teléfono" null="0" autoincrement="0">
+<datatype>INTEGER(10)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="338" y="372" name="Hostería/Actividad">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Hostería_id" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Hostería" row="id" />
+</row>
+<row name="Actividad_id" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Actividad" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="783" y="229" name="Detalle_actividad">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Reserva_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Reserva" row="id" />
+</row>
+<row name="Actividad_id" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Actividad" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="578" y="375" name="Actividad">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Nombre" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>'NULL'</default></row>
+<row name="Tipo_actividad_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Tipo_actividad" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="837" y="403" name="Tipo_actividad">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Tipo" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>'NULL'</default></row>
+<row name="Valor" null="1" autoincrement="0">
+<datatype>INTEGER(20)</datatype>
+<default>NULL</default></row>
+<row name="Cantidad_máxima" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="476" y="54" name="Reserva">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Fecha_reserva" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<row name="Cantidad_personas" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="Fecha_check_in" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<row name="Fecha_check_out" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="Persona_id" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Persona" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="237" y="65" name="Persona">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Nombre" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>'NULL'</default></row>
+<row name="Apellido" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>'NULL'</default></row>
+<row name="DNI" null="0" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>'NULL'</default></row>
+<row name="Teléfono" null="0" autoincrement="0">
+<datatype>INTEGER(10)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+</sql>
+

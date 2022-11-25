@@ -1,0 +1,131 @@
+.container{
+	width: 100%;
+	position: relative;
+}
+.carousel-inner img {
+    width: 100%;
+    max-height: 460px;
+	object-fit:cover;
+	position: absolute;
+	box-sizing: border-box;
+}
+.carousel-inner{
+ height: 350px;
+ display:block;
+ width: 100%;
+}
+.container img{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-color: rgba(97, 129, 97, 0.843);
+}
+.container #parrafo-spa{
+	font-size: 3rem;
+	color:white;
+	position: absolute;
+	top: 15%;
+	left:40%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+	letter-spacing: 4px;
+	cursor: pointer;
+}
+.container #parrafo-gastro{
+	font-size: 3rem;
+	color:white;
+	position: absolute;
+	top: 47%;
+	left:40%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+	letter-spacing: 4px;
+	cursor: pointer;
+}
+.container #parrafo-excu{
+	font-size: 3rem;
+	color:white;
+	position: absolute;
+	top: 82%;
+	left:40%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+	letter-spacing: 4px;
+	cursor: pointer;
+}
+
+.barra-superior {
+	box-sizing: border-box;
+    background-color: rgba(0,0,0,0.75);
+    height: 14vh;
+	font-weight: bold;
+	margin-bottom: 0.5vh;
+	color:#FFF;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.items {
+	width: 20%;
+	margin: 0;
+	font-size: 2vw;
+	font-family: sans-serif;
+}
+
+
+
+	.barra-superior p > a {
+            text-decoration: none;
+            color: #fff;
+        }
+	
+	ul {
+		list-style-type: none;
+	}
+	
+	.main-footer {
+		background-color: rgba(0,0,0,0.75);
+		text-align: center;
+		display: flex;
+		flex-flow: column wrap;
+
+	}
+	.footer{
+		margin-top:2vh ;
+		color: #fff;
+	}
+
+	.footer ul {
+		padding: 0;
+		cursor: pointer;
+	}
+
+	@media (min-width:800px) {
+
+		.items {
+			font-size: 1.6vw;
+		}
+		.main-footer {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+		}
+
+		.footer {
+			width: 30%;
+		}
+
+
+		.footer i {
+			margin-bottom: 3vh;
+		}
+	}
+	
+	
+	.maps {
+		font-size: 5.5vw;
+		margin-top: 15px;
+	}
+	

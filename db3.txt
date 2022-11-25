@@ -1,0 +1,144 @@
+create database bdG5;
+use bdG5;
+DROP TABLE IF EXISTS `Hosteria`;
+		
+CREATE TABLE `Hosteria` (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `Nombre` VARCHAR(20) NOT NULL DEFAULT 'NULL',
+  `Dirección` VARCHAR(20) NOT NULL DEFAULT 'NULL',
+  `Email` VARCHAR(50) NOT NULL DEFAULT 'NULL',
+  `Teléfono` VARCHAR(10) NOT NULL DEFAULT 'NULL',
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'Hosteria_actividad'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `Hosteria_actividad`;
+		
+CREATE TABLE `Hosteria_actividad` (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `Hosteria_id` INTEGER NOT NULL DEFAULT 0,
+  `Actividad_id` INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'Detalle_actividad'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `Detalle_actividad`;
+		
+CREATE TABLE `Detalle_actividad` (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `Reserva_id` INTEGER NULL DEFAULT NULL,
+  `Actividad_id` INTEGER NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'Actividad'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `Actividad`;
+		
+CREATE TABLE `Actividad` (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `Nombre` VARCHAR(20) NOT NULL DEFAULT 'NULL',
+  `Tipo_actividad_id` INTEGER NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'Tipo_actividad'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `Tipo_actividad`;
+		
+CREATE TABLE `Tipo_actividad` (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `Tipo` VARCHAR(20) NOT NULL DEFAULT 'NULL',
+  `Valor` INTEGER(20) NULL DEFAULT NULL,
+  `Cantidad_máxima` INTEGER(2) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'Reserva'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `Reserva`;
+		
+CREATE TABLE `Reserva` (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `Fecha_reserva` VARCHAR(10) NOT NULL DEFAULT 'NULL',
+  `Cantidad_personas` INTEGER(2) NOT NULL DEFAULT 0,
+  `Fecha_check_in` VARCHAR(10) NOT NULL DEFAULT 'NULL',
+  `Fecha_check_out` VARCHAR(10) NULL DEFAULT NULL,
+  `Persona_id` INTEGER(2) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'Persona'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `Persona`;
+		
+CREATE TABLE `Persona` (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `Nombre` VARCHAR(20) NOT NULL DEFAULT 'NULL',
+  `Apellido` VARCHAR(20) NOT NULL DEFAULT 'NULL',
+  `DNI` VARCHAR(10) NOT NULL DEFAULT 'NULL',
+  `Teléfono` INTEGER(10) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Foreign Keys 
+-- ---
+
+ALTER TABLE `Hosteria_actividad` ADD FOREIGN KEY (Hosteria_id) REFERENCES `Hosteria` (`id`);
+ALTER TABLE `Hosteria_actividad` ADD FOREIGN KEY (Actividad_id) REFERENCES `Actividad` (`id`);
+ALTER TABLE `Detalle_actividad` ADD FOREIGN KEY (Reserva_id) REFERENCES `Reserva` (`id`);
+ALTER TABLE `Detalle_actividad` ADD FOREIGN KEY (Actividad_id) REFERENCES `Actividad` (`id`);
+ALTER TABLE `Actividad` ADD FOREIGN KEY (Tipo_actividad_id) REFERENCES `Tipo_actividad` (`id`);
+ALTER TABLE `Reserva` ADD FOREIGN KEY (Persona_id) REFERENCES `Persona` (`id`);
+
+-- ---
+-- Table Properties
+-- ---
+
+-- ALTER TABLE `Hosteria` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Hosteria_actividad` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Detalle_actividad` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Actividad` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Tipo_actividad` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Reserva` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Persona` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ---
+-- Test Data
+-- ---
+
+-- INSERT INTO `Hosteria` (`id`,`Nombre`,`Dirección`,`Email`,`Teléfono`) VALUES
+-- ('','','','','');
+-- INSERT INTO `Hosteria/Actividad` (`id`,`Hosteria_id`,`Actividad_id`) VALUES
+-- ('','','');
+-- INSERT INTO `Detalle_actividad` (`id`,`Reserva_id`,`Actividad_id`) VALUES
+-- ('','','');
+-- INSERT INTO `Actividad` (`id`,`Nombre`,`Tipo_actividad_id`) VALUES
+-- ('','','');
+-- INSERT INTO `Tipo_actividad` (`id`,`Tipo`,`Valor`,`Cantidad_máxima`) VALUES
+-- ('','','','');
+-- INSERT INTO `Reserva` (`id`,`Fecha_reserva`,`Cantidad_personas`,`Fecha_check_in`,`Fecha_check_out`,`Persona_id`) VALUES
+-- ('','','','','','');
+-- INSERT INTO `Persona` (`id`,`Nombre`,`Apellido`,`DNI`,`Teléfono`) VALUES
+-- ('','','','','');

@@ -1,0 +1,392 @@
+/* * {
+    box-sizing: border-box;
+} */
+.row{
+    margin: 0;
+}
+
+/* Widgets */
+
+.widget{
+    width: 80px;
+    height: 80px;
+}
+
+#chat-icon{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+#calendar-icon{
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+} 
+
+body {
+    background-image: url('/images/Plato1.jpg'); 
+    background-attachment: fixed;  
+    color: white;
+
+    /* background-attachment: fixed; */
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+
+/* SECCIÓN SUPERIOR */
+
+#fullscreen{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 30px;
+    top: 100px;
+}
+
+#seccion-superior{
+height: 92vh;
+box-sizing: border-box;
+
+/* display: block; */
+
+/* background-color: aqua; */
+/* width: 50vw; */
+}
+
+.anterior{
+    height: 5vh;
+}
+
+/* Imágenes */
+
+#imagen-seleccionada-superior{
+/* margin: auto; */
+box-sizing: border-box;
+background-color: black;
+width: 80vw;
+height: 80vh;
+margin-left: 10vw;
+background-color: rgba(0,0,0,0.75);
+border-radius: 20px;
+}
+
+#primera-superior{
+    height: 90%;
+    width: 97%;
+}
+
+#segunda-superior{
+height: 70vh;
+}
+
+.botonmodif {
+    padding: 15px ;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border: solid 10px rgba(0, 0, 0, 0.90);
+    border-radius: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* SECCIÓN INFERIOR */
+
+#seccion-inferior{
+background-color: rgba(0, 0, 0, 0.4); 
+/* background-color: white; */
+height: 88vh;
+margin-bottom: 3px;
+
+}
+
+/* Barra de selección */
+.barra-superior {
+	box-sizing: border-box;
+    background-color: rgba(0,0,0,0.75);
+    height: 14vh;
+	font-weight: bold;
+	margin-bottom: 0.5vh;
+	color:#FFF;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+#barra-de-seleccion-superior{
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.75);
+    height: 8vh;
+    /* font-size: 36px; */
+    font-size: 2.25vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* margin: 0; */
+    margin-bottom: 0.5vh;
+    }
+
+.items {
+	width: 20%;
+	margin: 0;
+	font-size: 2vw;
+}
+
+
+
+	.barra-superior p > a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+/* Título */
+#titulo-seccion-inferior{
+
+height: 10vh;
+font-size: 3vw;
+text-transform: uppercase;
+font-weight: 600;
+padding-bottom: 40px;
+text-decoration: dashed;
+ background-color: rgba(0, 0, 0, 0.75)
+
+}
+
+/* Imagen */
+#derecho-inferior{
+background-color: rgba(0,0,0,0.75);
+height: 70vh;
+margin-top: 4vh;
+display: flex;
+align-items: center;
+border-radius: 20px;
+font-size: 40px;
+font-weight: 300;
+text-align: center;
+} 
+
+/* Barra de selección */
+
+#barra-de-seleccion-inferior{
+
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 70vh;
+    text-align: center;
+    font-size: 2.5vw;
+    margin-top: 4vh;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+ .seleccion-inferior{
+    /* height: 17.5vh; */
+    /* text-align: center; */
+    margin: 0;
+    /* vertical-align: middle;
+    align-content: space-between; */
+} 
+
+.seleccion-inferior{
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    flex-grow: 1;
+    font-weight: 400;
+    background-color:rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    margin: 5px;
+}
+
+/* .seleccionado-inferior{
+    display: flex;
+    background-color: rgba(0, 0, 90, 0.75);
+    text-align: center;
+    vertical-align: middle;
+    flex-grow: 1;
+}  */
+
+
+#imagen-inferior{
+    text-align: center;
+    height: 60vh;
+    width: 53vw;
+    margin: auto;
+    display: block;
+}
+
+/* FOOTER */
+
+ul {
+    list-style-type: none;
+}
+
+
+.footer{
+    margin-top:2vh ;
+    color: #fff;
+}
+
+.footer ul {
+    padding: 0;
+    cursor: pointer;
+}
+
+.maps {
+    font-size: 5.5vw;
+    margin-top: 15px;
+}
+
+.items {
+    font-size: 1.6vw;
+}
+.main-footer {
+    background-color: rgba(0,0,0,0.75);
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.footer {
+    width: 30%;
+}
+
+
+.footer i {
+    margin-bottom: 3vh;
+}
+
+
+
+/* DISPOSITIVOS MEDIANOS */
+
+
+@media (max-width: 768px){
+
+    .main-footer {
+        background-color: rgba(0,0,0,0.75);
+        justify-content: center;
+       align-items: center;
+        display: flex;
+        flex-flow: column wrap;
+    
+    }
+
+    .footer {
+        width: 90%;
+    }
+
+    .widget{
+        height: 50px;
+        width: 50px;
+        
+    }
+    #chat-icon{
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    #calendar-icon{
+        left: 20px;
+        bottom: 20px;
+    } 
+
+    #fullscreen{
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        top: 100px;
+    }
+
+    #primera-superior{
+        width: 55vw;
+        }
+
+    #segunda-superior{
+        display: none;
+        }
+
+    #barra-de-seleccion-superior{
+
+        font-size: 3.75vw;
+        }
+
+    #titulo-seccion-inferior{
+
+        font-size: 4vw;    
+        }
+
+
+    #barra-de-seleccion-inferior{
+
+        font-size: 5vw;    
+
+    }
+
+    #imagen-inferior{
+        width: 70%;
+    }
+
+    #seccion-inferior{
+        height: 158.5vh;
+    }
+
+    #visual-inferior{
+        height: 150vh;
+    }
+
+    
+
+}
+
+
+/* DISPOSITIVOS PEQUEÑOS */
+
+@media (max-width: 480px){
+    #primera-superior{
+        width: 80vw;
+        }
+
+    #segunda-superior{
+        display: none;
+        }
+
+
+    #barra-de-seleccion-superior{
+        font-size: 3.25vw;
+        }
+
+    #titulo-seccion-inferior{
+
+        font-size: 5vw;    
+        }
+
+    #barra-de-seleccion-inferior{
+
+        font-size: 7vw;
+        /* width: 200px;        */
+    
+    }
+
+    #imagen-inferior{
+        width: 90%;
+    }
+    #seccion-inferior{
+        height: 9vh;
+    }
+
+    #visual-inferior{
+        height: 13vh;
+    }
+    #seccion-inferior{
+        height: 158.5vh;
+    }
+
+    #visual-inferior{
+        height: 150vh;
+    }
+
+}

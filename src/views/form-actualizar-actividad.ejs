@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LORDICON -->
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/43ee8fadd4.js" crossorigin="anonymous"></script>
+    <!-- ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="/CSS/crear-actualizar-form.css">
+    <title>Actualizar actividad</title>
+</head>
+<body>
+
+    <%- include ('./partials/header.ejs') %>
+    <div class="div1">
+        
+        <h1> Estás en la actividad: <%= actividades.nombre %></h1>
+
+        <form action="/actividades/update/<%= actividades.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <section class="form-section">
+                <article class="form-items">
+                    <label for="nombre">Nombre de la actividad:</label>
+                    <input type="text" id="nombre" name="nombre" value="<%= actividades.nombre %>" placeholder="Nombre de la actividad" class="form-input">
+                </article>
+                <article class="form-items">
+                    <label for="precio">Precio:</label>
+                    <input type="text" id="precio" name="precio" value="<%= actividades.valor %>" placeholder="Precio de la actividad" class="form-input">
+                </article>
+                <article class="form-items">
+                    <label for="participantes">Minimo de participantes:</label>
+                    <input type="text" id="participantes" name="participantes" value="<%= actividades.participantes %>" placeholder="Cantidad de participantes" class="form-input">
+                </article>
+                <!-- <article class="form-items">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" id="tipo" name="tipo" placeholder="Participantes de la actividad" class="form-input">
+                </article> -->
+                
+                    <article class="form-items">
+                        <label for="categoria">Categoria:</label>
+                        <select name="categoria" id="categoria" class="form-input">
+                            <% if (actividades.tipo == 'nuevo'){ %>
+                            <option value="">Escoge la categoria</option>
+                            <option value="nuevo" selected>Nuevo</option>
+                            <option value="oferta">Actividad de temporada</option>
+                            <% } %>
+                            <% if (actividades.tipo == 'Temporada'){ %>
+                                <option value="">Escoge la categoria</option>
+                                <option value="nuevo" >Nuevo</option>
+                                <option value="oferta" selected>Actividad de temporada</option>
+                            <% } %>
+                        </select>
+                    </article>
+                    
+                <article class="form-items">
+                    <label for="descripcion">Descripcion:</label>
+                    <textarea id="descripcion" name="descripcion"  class="text-area" > <%= actividades.descripcion %> </textarea>
+                </article>
+                <article class="form-items">
+                    <label for="imgPrincipal">Cargar imagen:</label>
+                    <input type="file" id="imgPrincipal" name="imgPrincipal" multiple class="form-input">
+                </article>
+            </section>
+            
+            <button type="submit" class="form-button">Actualizar actividad</button>
+            
+        </form>
+       <br>
+        <form action="/actividades/update/<%=actividades.nombre%>?_method=DELETE" method="POST">
+            <button type="submit" class="form-button-delete">Eliminar</button>
+        </form>
+        
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>

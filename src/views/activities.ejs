@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/43ee8fadd4.js" crossorigin="anonymous"></script>
+    <!-- LORDICON -->
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+    <!-- ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="/CSS/activities.css">
+    <title>Actividades</title>
+</head>
+<body>
+
+    <%- include ('./partials/header.ejs') %>
+
+    <h1> Actividades</h1>
+    <section class="card">
+        <% for(let a of actividades) { %>
+        <div class="card-activitie">
+            <a href="/actividades/detalle/<%= a.nombre %>" class="card-items"> <!--Ruta de donde esta el producto en detalle-->
+                <img class="image-activitie" src="/images/actividades/<%= a.imagen %>" alt="imagen de actividad">
+                <article >
+                    <h2>Actividad: <%= a.nombre %></h2>
+                    <span>Participantes: <%= a.participantes%></span>
+                    <p>Precio: $<%= a.valor  %></p>
+                    <p>Descripcion: <%= a.descripcion %>
+                    </p>
+                </article>
+            </a>
+        </div>
+        <% } %>
+    </section>
+    <a type="submit" class="card-button" href="/actividades/create">Nueva actividad</a>
+    <a type="submit" class="card-button" href="/carrito">Reservar actividad</a>
+
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>

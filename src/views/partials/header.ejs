@@ -1,0 +1,18 @@
+
+        <header class="sticky">
+            <nav class = 'barra-superior'>
+                <p class = 'items'> <a href="/"> <lord-icon src="https://cdn.lordicon.com/gihbnrhs.json" trigger="hover" style="width:160px;height:120px">
+                </lord-icon> </a></p>                   
+                <% if (locals.isLogged) { %>
+                    <p class = 'items'> <a href=""> </a></p>
+                    <p class = 'items'> <a href="/actividades"> ACTIVIDADES </a></p>                 
+                    <p class = 'items'> <a href="/carrito"> RESERVAS </a> </p>
+                    <p class = 'items'> <a href="/profile">  MI PERFIL  </a></p>
+                <% } else { %>
+                    <p class = 'items'> <a href="/actividades"> ACTIVIDADES </a></p>                 
+                    <p class = 'items'> <a href="/carrito"> RESERVAS </a> </p>
+                    <p class = 'items'> <a href="/register"> REGISTRATE </a></p>
+                    <p class = 'items'> <a href="/login"> LOGIN </a></p>
+                <% } %>  
+            </nav>    
+        </header>
